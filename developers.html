@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flora Club Official Website</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="main.js"></script>
+<style>
+body,h1,p,li {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+  <h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">FLOWER SHOP</h1>
+  <h1>Flora Club</h1>
+
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="About.html" class="w3-bar-item w3-button">Home</a>
+      <button onclick="document.getElementById('cart').style.display='block'" class="w3-bar-item w3-button">Cart</button>
+      <a href="#" class="w3-bar-item w3-button">About the Company</a>
+    </div>
+  </div>
+  <hr>
+</header>
+
+<div id="cart" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-padding-32">
+    <div class="w3-container w3-center">
+      <span onclick="document.getElementById('cart').style.display='none'" class="button w3-button w3-display-topright w3-large w3-text-white">x</span>
+      <h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">CART</h1>
+    </div>
+    <div class="w3-container w3-center">
+      <ul class="list-group list-group-flush" id="cart-items">
+        <li class="list-group-item" id="noItem">No item in the cart.</li>
+      </ul>
+      <p id="cart-price" class="w3-padding">Total: PHP 0.00</p>
+    </div>
+  <hr>
+    <div class="w3-container w3-center">
+      <h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">DETAILS</h1>
+    </div>
+    <div class="card-body" id="customer">
+    <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="get">  
+    <div class="w3-container">
+        <label class="w3-tag w3-round" style="background-color:rgb(192, 131, 112)">Name</label>
+        <input type="text" name="cust_name" class="w3-input w3-border w3-margin-top w3-margin-bottom" placeholder="Juan Dela Cruz">
+      </div>
+      <div class="w3-container">
+        <label class="w3-tag w3-round" style="background-color:rgb(192, 131, 112)">Email</label>
+        <input type="text" name="cust_email" class="w3-input w3-border w3-margin-top w3-margin-bottom" placeholder="jdelacruz2026@clc.pshs.edu.ph">
+      </div>
+      <div class="w3-container">
+        <label class="w3-tag w3-round" style="background-color:rgb(192, 131, 112)">Address</label>
+        <input type="text" name="cust_addr" class="w3-input w3-border w3-margin-top w3-margin-bottom" placeholder="Lily Hill St., Clark Freeport Zone, Pampanga">
+      </div>
+      <input type="hidden" id="customer-order" name="cust_order" class="w3-input w3-border w3-margin-top w3-margin-bottom">
+      <!-- Submit-->
+      <input type="submit" id="submit" value="Submit" class="w3-button w3-block w3-padding-large w3-margin-bottom w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" style="background-color:rgb(192, 131, 112)">  
+     </form>
+    </div>
+    </div>
+</div>
+
+<div class="w3-container w3-center w3-margin w3-opacity">
+  <h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">DEVELOPERS</h1>
+  </div>
+  
+  <hr>
+  
+  <!-- Photo Grid -->
+  <div class="w3-row-padding" style="margin-bottom:128px">
+    <div class="w3-third">
+        <div class="container">
+          <img src="https://i.pinimg.com/564x/db/4f/18/db4f184b802e54d0d3fcacf5f3671ecf.jpg" alt="My Queen Crown" class="image">
+          <div class="overlay w3-padding-64 w3-center">
+          <h1 class="w3-padding w3-text-white">Mary Gwyneth G. Tenio</h1>
+          <h2 class="w3-padding w3-text-white">9-Pinatubo</h2>
+          <p class="w3-padding w3-text-white">No crown is enough to capture your dazzling sight, my precious lovely Queen of the night.</p>
+          </div>
+        </div>
+        </div>
+  
+        <div class="w3-third">
+          <div class="container">
+            <img src="https://i.pinimg.com/474x/cc/66/9b/cc669b809667e9207358b9c3e3641253.jpg" alt="Heart Calls Your Name Crown" class="image">
+            <div class="overlay w3-padding-64 w3-center">
+            <h1 class="w3-padding w3-text-white">Brynn Kahlil A. Sales</h1>
+            <h2 class="w3-padding w3-text-white">9-Pinatubo</h2>
+            <p class="w3-padding w3-text-white">I cannot breathe when you are not near. I cannot love anyone other but you, my dear.</p>
+            </div>
+          </div>
+          </div>
+  
+          <div class="w3-third">
+            <div class="container">
+              <img src="https://i.pinimg.com/564x/76/1c/68/761c680a376565aa249365849727768a.jpg" alt="On My Own Crown" class="image">
+              <div class="overlay w3-padding-64 w3-center">
+                <h1 class="w3-padding w3-text-white">Nicolette Anne A. Pinon</h1>
+                <h2 class="w3-padding w3-text-white">9-Pinatubo</h2>
+              <p class="w3-padding w3-text-white">A crown crafted by the hands of the one who has been left dusted in time.</p>
+              </div>
+            </div>
+            </div>
+    </div>
+</div>
+
+</body>
