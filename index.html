@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flora Club Official Website</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="main.js"></script>
+<style>
+body,h1,p,li {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+  <h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">FLOWER SHOP</h1>
+  <h1>Flora Club</h1>
+
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="About.html" class="w3-bar-item w3-button">Home</a>
+      <button onclick="document.getElementById('cart').style.display='block'" class="w3-bar-item w3-button">Cart</button>
+      <a href="#" class="w3-bar-item w3-button">About the Company</a>
+    </div>
+  </div>
+  <hr>
+</header>
+
+<div id="cart" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-padding-32">
+    <div class="w3-container w3-center">
+      <span onclick="document.getElementById('cart').style.display='none'" class="button w3-button w3-display-topright w3-large w3-text-white">x</span>
+      <h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">CART</h1>
+    </div>
+    <div class="w3-container w3-center">
+      <ul class="list-group list-group-flush" id="cart-items">
+        <li class="list-group-item" id="noItem">No item in the cart.</li>
+      </ul>
+      <p id="cart-price" class="w3-padding">Total: PHP 0.00</p>
+    </div>
+  <hr>
+    <div class="w3-container w3-center">
+      <h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">DETAILS</h1>
+    </div>
+    <div class="card-body" id="customer">
+    <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="get">  
+    <div class="w3-container">
+        <label class="w3-tag w3-round" style="background-color:rgb(192, 131, 112)">Name</label>
+        <input type="text" name="cust_name" class="w3-input w3-border w3-margin-top w3-margin-bottom" placeholder="Juan Dela Cruz">
+      </div>
+      <div class="w3-container">
+        <label class="w3-tag w3-round" style="background-color:rgb(192, 131, 112)">Email</label>
+        <input type="text" name="cust_email" class="w3-input w3-border w3-margin-top w3-margin-bottom" placeholder="jdelacruz2026@clc.pshs.edu.ph">
+      </div>
+      <div class="w3-container">
+        <label class="w3-tag w3-round" style="background-color:rgb(192, 131, 112)">Address</label>
+        <input type="text" name="cust_addr" class="w3-input w3-border w3-margin-top w3-margin-bottom" placeholder="Lily Hill St., Clark Freeport Zone, Pampanga">
+      </div>
+      <input type="hidden" id="customer-order" name="cust_order" class="w3-input w3-border w3-margin-top w3-margin-bottom">
+      <!-- Submit-->
+      <input type="submit" id="submit" value="Submit" class="w3-button w3-block w3-padding-large w3-margin-bottom w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" style="background-color:rgb(192, 131, 112)">  
+     </form>
+    </div>
+    </div>
+</div>
+
+<div class="w3-container w3-center w3-margin w3-opacity">
+  <h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">FLORA CROWNS</h1>
+  </div>
+  
+  <hr>
+  
+  <!-- Photo Grid -->
+  <div class="w3-row-padding" style="margin-bottom:128px">
+    <div class="w3-third">
+        <div class="container">
+          <img src="https://i.pinimg.com/564x/c1/c8/63/c1c8632628b20d59e857ab70fc0fdeca.jpg" alt="My Queen Crown" class="image">
+          <div class="overlay w3-padding-64 w3-center">
+          <h1 class="w3-padding w3-text-white">My Queen Crown</h1>
+          <h2 class="w3-padding w3-text-white">Php 35.00</h2>
+          <p class="w3-padding w3-text-white">No crown is enough to capture your dazzling sight, my precious lovely Queen of the night.</p>
+          <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('My Queen Crown', 35)">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+  
+        <div class="w3-third">
+          <div class="container">
+            <img src="https://i.pinimg.com/564x/15/1e/85/151e85b0301e4b28718ab908bc19b246.jpg" alt="Heart Calls Your Name Crown" class="image">
+            <div class="overlay w3-padding-64 w3-center">
+            <h1 class="w3-padding w3-text-white">Heart Calls Your Name Crown</h1>
+            <h2 class="w3-padding w3-text-white">Php 30.00</h2>
+            <p class="w3-padding w3-text-white">I cannot breathe when you are not near. I cannot love anyone other but you, my dear.</p>
+            <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Heart Calls Your Name Crown', 30)">Add to Cart</button>
+            </div>
+          </div>
+          </div>
+  
+          <div class="w3-third">
+            <div class="container">
+              <img src="https://i.pinimg.com/564x/94/af/ac/94afacacc71922b996f6c86f6a1a7bbe.jpg" alt="On My Own Crown" class="image">
+              <div class="overlay w3-padding-64 w3-center">
+                <h1 class="w3-padding w3-text-white">On My Crown</h1>
+                <h2 class="w3-padding w3-text-white">Php 30.00</h2>
+              <p class="w3-padding w3-text-white">A crown crafted by the hands of the one who has been left dusted in time.</p>
+              <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('On My Own Crown', 30)">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+    </div>
+  
+    <div class="w3-row-padding" style="margin-bottom:128px">
+      <div class="w3-third">
+          <div class="container">
+            <img src="https://i.pinimg.com/564x/99/9f/ff/999fff7ffcf3b1bfc1c5858452afe64c.jpg" alt="Breath of Fresh Air Crown" class="image">
+            <div class="overlay w3-padding-64 w3-center">
+              <h1 class="w3-padding w3-text-white">Breath of Fresh Air Crown</h1>
+              <h2 class="w3-padding w3-text-white">Php 30.00</h2>
+            <p class="w3-padding w3-text-white">Every flower adorned cannot compare to your lovely sight, a breathe of fresh air.</p>
+            <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Breath of Fresh Air Crown', 30)">Add to Cart</button>
+            </div>
+          </div>
+          </div>
+  
+          <div class="w3-third">
+            <div class="container">
+              <img src="https://i.pinimg.com/564x/79/aa/46/79aa46a65a3465695621572b98364b5b.jpg" alt="Gold Rush Crown" class="image">
+              <div class="overlay w3-padding-64 w3-center">
+                <h1 class="w3-padding w3-text-white">Gold Rush Crown</h1>
+                <h2 class="w3-padding w3-text-white">Php 40.00</h2>
+              <p class="w3-padding w3-text-white">Your eyes drown my very being, the rush of gold I feel in my veins.</p>
+              <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Gold Rush Crown', 40)">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+  
+            <div class="w3-third">
+              <div class="container">
+                <img src="https://i.pinimg.com/564x/41/5f/1d/415f1d2520e0811397762a4f3ba7d2f6.jpg" alt="Archer Crown" class="image">
+                <div class="overlay w3-padding-64 w3-center">
+                  <h1 class="w3-padding w3-text-white">Archer Crown</h1>
+                  <h2 class="w3-padding w3-text-white">Php 25.00</h2>
+                <p class="w3-padding w3-text-white">Could they see right through me? Could I see right through me?</p>
+                <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Archer Crown', 25)">Add to Cart</button>
+                </div>
+              </div>
+              </div>
+      </div>
+
+<div class="w3-container w3-center w3-margin w3-opacity">
+<h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">FLORA IN A VASE</h1>
+</div>
+
+<hr>
+
+<!-- Photo Grid -->
+<div class="w3-row-padding" style="margin-bottom:128px">
+  <div class="w3-third">
+      <div class="container">
+        <img src="https://i.pinimg.com/564x/5b/8a/1e/5b8a1ec031a68b1b7719bd14515778ef.jpg" alt="Fireplace Ashes Flora" class="image">
+        <div class="overlay w3-padding-64 w3-center">
+          <h1 class="w3-padding w3-text-white">Fireplace Ashes Flora</h1>
+          <h2 class="w3-padding w3-text-white">Php 95.00</h2>
+        <p class="w3-padding w3-text-white">I should've left ages ago, yet I kept staring at the fireplace ashes, giving up my everything.</p>
+        <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Fireplace Ashes Flora', 95)">Add to Cart</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="w3-third">
+        <div class="container">
+          <img src="https://i.pinimg.com/564x/8b/a7/68/8ba76820ec060f7682bc3f18402b41ae.jpg" alt="Speak Now Flora" class="image">
+          <div class="overlay w3-padding-64 w3-center">
+            <h1 class="w3-padding w3-text-white">Speak Now Flora</h1>
+            <h2 class="w3-padding w3-text-white">Php 80.00</h2>
+          <p class="w3-padding w3-text-white">It is not your words to say, but it is only right for you to Speak Now.</p>
+          <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Speak Now Flora', 80)">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="container">
+            <img src="https://i.pinimg.com/564x/13/4e/3a/134e3a7e171d9596b0f3b8031389cf92.jpg" alt="Tears Flora" class="image">
+            <div class="overlay w3-padding-64 w3-center">
+              <h1 class="w3-padding w3-text-white">Tears Flora</h1>
+              <h2 class="w3-padding w3-text-white">Php 75.00</h2>
+            <p class="w3-padding w3-text-white">Perhaps all would've been well had we did things a bit different than what we thought was fate.</p>
+            <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Tears Flora', 75)">Add to Cart</button>
+            </div>
+          </div>
+          </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-bottom:128px">
+    <div class="w3-third">
+        <div class="container">
+          <img src="https://i.pinimg.com/564x/1f/9b/9a/1f9b9a21e805214e3d3bb821e9f8ed94.jpg" alt="Apart Flora" class="image">
+          <div class="overlay w3-padding-64 w3-center">
+            <h1 class="w3-padding w3-text-white">Apart Flora</h1>
+            <h2 class="w3-padding w3-text-white">Php 95.00</h2>
+          <p class="w3-padding w3-text-white">Don't fade from my mind, don't let us be apart. Stay- should it be the last thing I say,</p>
+          <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Apart Flora', 95)">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="container">
+            <img src="https://i.pinimg.com/564x/a4/ec/f2/a4ecf26690d5741eecbb0057dcc4878f.jpg" alt="Heavens Flora" class="image">
+            <div class="overlay w3-padding-64 w3-center">
+              <h1 class="w3-padding w3-text-white">Heavens Flora</h1>
+              <h2 class="w3-padding w3-text-white">Php 90.00</h2>
+            <p class="w3-padding w3-text-white">If it takes asking a god for your hand, then I shall reach to the heavens above.</p>
+            <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Heavens Flora', 90)">Add to Cart</button>
+            </div>
+          </div>
+          </div>
+
+          <div class="w3-third">
+            <div class="container">
+              <img src="https://i.pinimg.com/564x/08/49/ee/0849eef385721fb44bf79cce81f80004.jpg" alt="My Perfect Flora" class="image">
+              <div class="overlay w3-padding-64 w3-center">
+                <h1 class="w3-padding w3-text-white">My Perfect Flora</h1>
+                <h2 class="w3-padding w3-text-white">Php 80.00</h2>
+              <p class="w3-padding w3-text-white">Run away from us all, reach the heavens before you fall, My Perfect Flora.</p>
+              <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('My Perfect Flora', 80)">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+    </div>
+
+<div class="w3-container w3-center w3-margin w3-opacity">
+<h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">BOUQUETS</h1>
+</div>
+
+<hr>
+
+<!-- Photo Grid -->
+<div class="w3-row-padding" style="margin-bottom:128px">
+  <div class="w3-third">
+      <div class="container">
+        <img src="https://i.pinimg.com/564x/8c/30/a8/8c30a8c6c7fdf33c8bbde0bef84d92aa.jpg" alt="First Bliss Bouquet" class="image">
+        <div class="overlay w3-padding-64 w3-center">
+          <h1 class="w3-padding w3-text-white">First Bliss Bouquet</h1>
+          <h2 class="w3-padding w3-text-white">Php 50.00</h2>
+        <p class="w3-padding w3-text-white">The first bliss of a morning dew. Hush, let the flower shine for itself as it breaks into pieces for you.</p>
+        <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('First Bliss Bouquet', 50)">Add to Cart</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="w3-third">
+        <div class="container">
+          <img src="https://i.pinimg.com/564x/07/e5/b5/07e5b53d38486b829be9fb46f70915e3.jpg" alt="Raindrops Bouquet" class="image">
+          <div class="overlay w3-padding-64 w3-center">
+            <h1 class="w3-padding w3-text-white">Raindrops Bouquet</h1>
+            <h2 class="w3-padding w3-text-white">Php 60.00</h2>
+          <p class="w3-padding w3-text-white">Pages have turned, bridges have burned, and yet the raindrops of yesterday can still be heard.</p>
+          <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Raindrops Bouquet', 60)">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="container">
+            <img src="https://i.pinimg.com/564x/0c/72/ed/0c72ed2c701e202818feef253bb44c36.jpg" alt="Lover Bouquet" class="image">
+            <div class="overlay w3-padding-64 w3-center">
+              <h1 class="w3-padding w3-text-white">Lover Bouquet</h1>
+              <h2 class="w3-padding w3-text-white">Php 55.00</h2>
+            <p class="w3-padding w3-text-white">Love is as bright as daylight. Willing to be left frozen in time for the sake of love.</p>
+            <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Lover Bouquet', 55)">Add to Cart</button>
+            </div>
+          </div>
+          </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-bottom:128px">
+    <div class="w3-third">
+        <div class="container">
+          <img src="https://i.pinimg.com/564x/75/bd/4f/75bd4f4e7fa12e4a778f6ddd787768eb.jpg" alt="Beautiful Stranger Bouquet" class="image">
+          <div class="overlay w3-padding-64 w3-center">
+            <h1 class="w3-padding w3-text-white">Beautiful Stranger Bouquet</h1>
+            <h2 class="w3-padding w3-text-white">Php 45.00</h2>
+          <p class="w3-padding w3-text-white">The flowers by the train station seem to bloom lovelier on the days I see you.</p>
+          <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Beautiful Stranger Bouquet', 45)">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="container">
+            <img src="https://i.pinimg.com/564x/31/2f/ef/312fef94421d8b55bb67cf5008112606.jpg" alt="Blank Slate Bouquet" class="image">
+            <div class="overlay w3-padding-64 w3-center">
+              <h1 class="w3-padding w3-text-white">Blank Slate Bouquet</h1>
+              <h2 class="w3-padding w3-text-white">Php 55.00</h2>
+            <p class="w3-padding w3-text-white">A blank slate, waiting for a tiny drop of paint for everything to change.</p>
+            <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Blank Slate Bouquet', 55)">Add to Cart</button>
+            </div>
+          </div>
+          </div>
+
+          <div class="w3-third">
+            <div class="container">
+              <img src="https://i.pinimg.com/564x/f8/94/32/f89432b09acba8a265891a38121f82fd.jpg" alt="Aisle Bouquet" class="image">
+              <div class="overlay w3-padding-64 w3-center">
+                <h1 class="w3-padding w3-text-white">Aisle Bouquet</h1>
+                <h2 class="w3-padding w3-text-white">Php 45.00</h2>
+              <p class="w3-padding w3-text-white">And I'll await the day I'll walk down that aisle, your eyes I've finally captured.</p>
+              <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Aisle Bouquet', 45)">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+    </div>
+
+    <div class="w3-container w3-center w3-margin w3-opacity">
+      <h1 class="w3x-large w3-tag w3-round" style="background-color:rgb(192, 131, 112)">PAINT IN BLOOM</h1>
+      </div>
+
+      <hr>
+      
+      <!-- Photo Grid -->
+      <div class="w3-row-padding" style="margin-bottom:128px">
+        <div class="w3-third">
+            <div class="container">
+              <img src="https://i.pinimg.com/564x/c0/96/cd/c096cd5eb640da334137eb35bcf6b4e4.jpg" alt="Mystified" class="image">
+              <div class="overlay w3-padding-64 w3-center">
+                <h1 class="w3-padding w3-text-white">Mystified</h1>
+                <h2 class="w3-padding w3-text-white">Php 850.00</h2>
+              <p class="w3-padding w3-text-white">It was a morning I could not remember, a night I cannot recall. The moment I was mystified by you.</p>
+              <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Mystified', 850)">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+      
+            <div class="w3-third">
+              <div class="container">
+                <img src="https://i.pinimg.com/564x/09/13/a9/0913a97f551a3d8084191a2920d4775c.jpg" alt="First Love" class="image">
+                <div class="overlay w3-padding-64 w3-center">
+                  <h1 class="w3-padding w3-text-white">First Love</h1>
+                  <h2 class="w3-padding w3-text-white">Php 900.00</h2>
+                <p class="w3-padding w3-text-white">I was captured by you at first sight. I had loved you when I saw you under that light.</p>
+                <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('First Love', 900)">Add to Cart</button>
+                </div>
+              </div>
+              </div>
+      
+              <div class="w3-third">
+                <div class="container">
+                  <img src="https://i.pinimg.com/564x/e3/0e/0f/e30e0f30160540be4a5248d791a85b87.jpg" alt="Cornelia Street" class="image">
+                  <div class="overlay w3-padding-64 w3-center">
+                    <h1 class="w3-padding w3-text-white">Cornelia Street</h1>
+                    <h2 class="w3-padding w3-text-white">Php 1200.00</h2>
+                  <p class="w3-padding w3-text-white">The flowers were enchanting as we walked past Cornelia Street hand in hand.</p>
+                  <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Cornelia Street', 1200)">Add to Cart</button>
+                  </div>
+                </div>
+                </div>
+        </div>
+      
+        <div class="w3-row-padding" style="margin-bottom:128px">
+          <div class="w3-third">
+              <div class="container">
+                <img src="https://i.pinimg.com/564x/e4/21/44/e421448383ee061b23d01f93b1764ea8.jpg" alt="Take Care" class="image">
+                <div class="overlay w3-padding-64 w3-center">
+                  <h1 class="w3-padding w3-text-white">Take Care</h1>
+                  <h2 class="w3-padding w3-text-white">Php 800.00</h2>
+                <p class="w3-padding w3-text-white">You'll forever be as enchanting as the day I shall be destined to lose you.</p>
+                <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Take Care', 800)">Add to Cart</button>
+                </div>
+              </div>
+              </div>
+      
+              <div class="w3-third">
+                <div class="container">
+                  <img src="https://i.pinimg.com/564x/be/7b/3c/be7b3c5c7f1c0af9efeefa6070d46c61.jpg" alt="Sacred New Beginnings" class="image">
+                  <div class="overlay w3-padding-64 w3-center">
+                    <h1 class="w3-padding w3-text-white">Sacred New Beginnings</h1>
+                    <h2 class="w3-padding w3-text-white">Php 905.00</h2>
+                  <p class="w3-padding w3-text-white">Let this flower mark the start of a Sacred New Beginning, a love meant to last.</p>
+                  <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('Sacred New Beginnings', 905)">Add to Cart</button>
+                  </div>
+                </div>
+                </div>
+      
+                <div class="w3-third">
+                  <div class="container">
+                    <img src="https://i.pinimg.com/564x/06/b1/7a/06b17aaeb5abdae5ef98caa62c9f2f8c.jpg" alt="You" class="image">
+                    <div class="overlay w3-padding-64 w3-center">
+                      <h1 class="w3-padding w3-text-white">You</h1>
+                      <h2 class="w3-padding w3-text-white">Php 1000.00</h2>
+                    <p class="w3-padding w3-text-white">Loving you was and will always be the most beautiful gift bestowed upon me by the heavens.</p>
+                    <button class="button w3-button w3-padding-large w3-margin w3-text-white w3-hover-light-grey w3-hover-text-dark-grey" onclick="addToCart('You', 1000)">Add to Cart</button>
+                    </div>
+                  </div>
+                  </div>
+          </div>
+
+<!-- End Page Content -->
+</div>
+
+</body>
+</html>
