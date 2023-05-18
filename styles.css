@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(206, 190, 175);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.button {
+  background-color:rgb(192, 131, 112);
+}
+
+hr {
+  border: 20px solid rgb(192, 131, 112);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
